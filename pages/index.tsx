@@ -1,14 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Header from '../components/Header/Header';
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>Apple 2022</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
     </div>
   );
 };
