@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = ({ categories, products }) => {
   return (
     <div>
       <Head>
-        <title>Apple Redesign 2022</title>
+        <title>Apple Reseller</title>
         <link
           rel='icon'
           href='/favicon.ico'

@@ -12,8 +12,8 @@ const Promo: React.FC<PromoProps> = () => {
         <div className={styles.promoTitleContainer}>
           <h1 className={styles.promoTitle}>
             <span className={(styles.promoTitleText, styles.promoTitleText_Colored)}>Powered</span>
-            <span className={styles.promoTitleText}>By Intellect </span>
-            <span className={styles.promoTitleText}>Driven By Values</span>
+            <span className={styles.promoTitleText}>By Stripe & Sanity </span>
+            <span className={styles.promoTitleText}>Driven By NextJS</span>
           </h1>
           <div className='space-x-8'>
             <Button title='Buy Now' />
