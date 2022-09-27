@@ -8,4 +8,8 @@
   body {
     @apply font-body text-[#232428];
   }
+
+  main {
+    @apply relative h-[200vh] bg-[#E7ECEE];
+  }
 }

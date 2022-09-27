@@ -1,12 +1,10 @@
+import { SearchIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import styles from './header.module.css';
-import { SearchIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react/outline';
 
-type HeaderProps = {};
-
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC = () => {
   const session = false;
 
   return (
