@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className={styles.productTextContainer}>
         <div className={styles.productText}>
           <p>{product.title}</p>
-          <p>{product.price}</p>
+          <p>{product.price} $</p>
         </div>
         <div className={styles.productShoppingCart}>
           <ShoppingCartIcon className={styles.productShoppingCartIcon} />

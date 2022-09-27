@@ -25,3 +25,7 @@
 .productsPanels {
   @apply mx-auto max-w-fit pt-10 pb-24 sm:px-4;
 }
+
+.productsPanel {
+  @apply grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2;
+}
