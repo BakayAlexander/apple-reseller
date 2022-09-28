@@ -25,7 +25,7 @@ const Products: React.FC<ProductsProps> = ({ categories, products }) => {
   return (
     <section className={styles.products}>
       <div className={styles.productsContainer}>
-        <h1 className={styles.productsTitle}>New Promos</h1>
+        <h1 className={styles.productsTitle}>Products</h1>
         <Tab.Group>
           <Tab.List className={styles.productsTabs}>
             {categories.map(category => (

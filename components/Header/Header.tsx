@@ -34,7 +34,7 @@ const Header: React.FC = () => {
         <SearchIcon className={styles.headerIcon} />
         <Link href='/checkout'>
           <div className={styles.headerCartContainer}>
-            <span className={styles.headerCartNumber}>{itemsInCart.length}</span>
+            {!!itemsInCart.length && <span className={styles.headerCartNumber}>{itemsInCart.length}</span>}
             <ShoppingBagIcon className={styles.headerIcon} />
           </div>
         </Link>

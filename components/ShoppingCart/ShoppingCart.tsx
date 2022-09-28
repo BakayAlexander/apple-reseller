@@ -14,7 +14,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = () => {
   return (
     <Link href='/checkout'>
       <div className={styles.shoppingCart}>
-        {itemsInCart.length > 0 && <span className={styles.shoppingCartAmount}>{itemsInCart.length}</span>}
+        {!!itemsInCart.length && <span className={styles.shoppingCartAmount}>{itemsInCart.length}</span>}
         <ShoppingBagIcon className={styles.shoppingCartIcon} />
       </div>
     </Link>

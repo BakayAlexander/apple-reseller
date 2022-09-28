@@ -40,7 +40,6 @@ export const cartItemsSelector = (state: RootState) => state.cart.items;
 export const singleCartItemSelector = (state: RootState, id: string) =>
   state.cart.items.filter(item => item._id === id);
 
-export const totalPriceSelector = (state: RootState) =>
-  state.cart.items.reduce((total, item) => (total += item.price), 0);
+export const totalPriceSelector = (state: RootState) => state.cart.items.reduce((acc, item) => (acc += item.price), 0);
 
 export default cartSlice.reducer;
