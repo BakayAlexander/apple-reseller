@@ -1,14 +1,23 @@
 import { ShoppingCartIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import React from 'react';
+import toast from 'react-hot-toast';
+import { useDispatch } from 'react-redux';
 import { Product } from '../../pages/api/getProducts';
+import { addToCart } from '../../redux/cartSlice';
 import { urlFor } from '../../sanity';
 import styles from './productcard.module.css';
 
 type ProductCardProps = { product: Product };
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const addItemToShoppingCart = () => {};
+  const dispatch = useDispatch();
+
+  const addItemToShoppingCart = () => {
+    dispatch(addToCart(product));
+
+    toast.success(`${product.title} added to shopping cart`);
+  };
 
   return (
     <div className={styles.product}>

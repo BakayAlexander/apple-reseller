@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '../components/Header/Header';
 import Promo from '../components/Landing/Promo';
 import Products from '../components/Products/Products';
+import ShoppingCart from '../components/ShoppingCart/ShoppingCart';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
 import { Category } from './api/getCategories';
@@ -29,6 +30,7 @@ const Home: React.FC<HomeProps> = ({ categories, products }) => {
         categories={categories}
         products={products}
       />
+      <ShoppingCart />
     </div>
   );
 };

@@ -2,10 +2,13 @@ import { SearchIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react/outline'
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { cartItemsSelector } from '../../redux/cartSlice';
 import styles from './header.module.css';
 
 const Header: React.FC = () => {
   const session = false;
+  const itemsInCart = useSelector(cartItemsSelector);
 
   return (
     <header className={styles.header}>
@@ -29,9 +32,9 @@ const Header: React.FC = () => {
       </div>
       <div className={styles.headerSearchCartContainer}>
         <SearchIcon className={styles.headerIcon} />
-        <Link href='/chekcout'>
+        <Link href='/checkout'>
           <div className={styles.headerCartContainer}>
-            <span className={styles.headerCartNumber}>2</span>
+            <span className={styles.headerCartNumber}>{itemsInCart.length}</span>
             <ShoppingBagIcon className={styles.headerIcon} />
           </div>
         </Link>
