@@ -8,6 +8,8 @@ import styles from './productcard.module.css';
 type ProductCardProps = { product: Product };
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const addItemToShoppingCart = () => {};
+
   return (
     <div className={styles.product}>
       <div className={styles.productImage}>
@@ -23,7 +25,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <p>{product.title}</p>
           <p>{product.price} $</p>
         </div>
-        <div className={styles.productShoppingCart}>
+        <div
+          className={styles.productShoppingCart}
+          onClick={addItemToShoppingCart}
+        >
           <ShoppingCartIcon className={styles.productShoppingCartIcon} />
         </div>
       </div>
