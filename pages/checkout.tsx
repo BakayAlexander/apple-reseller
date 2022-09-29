@@ -3,9 +3,7 @@ import React from 'react';
 import CheckoutBlock from '../components/CheckoutBlock/CheckoutBlock';
 import Header from '../components/Header/Header';
 
-type checkoutProps = {};
-
-const checkout: React.FC<checkoutProps> = () => {
+const checkout: React.FC = () => {
   return (
     <div className='min-h-screen overflow-hidden bg-[#E7ECEE]'>
       <Head>
