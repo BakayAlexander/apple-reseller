@@ -1,4 +1,6 @@
 import { SearchIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react/outline';
+import { Session } from 'next-auth';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -7,7 +9,8 @@ import { cartItemsSelector } from '../../redux/cartSlice';
 import styles from './header.module.css';
 
 const Header: React.FC = () => {
-  const session = false;
+  const { data: session } = useSession();
+
   const itemsInCart = useSelector(cartItemsSelector);
 
   return (
@@ -40,17 +43,17 @@ const Header: React.FC = () => {
         </Link>
         {session ? (
           <Image
-            src={'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'}
+            src={session.user?.image || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'}
             alt='User avatar'
             className={styles.headerUserAvatar}
             width={34}
             height={34}
-            onClick={() => console.log('first')}
+            onClick={() => signOut()}
           />
         ) : (
           <UserIcon
             className={styles.headerIcon}
-            onClick={() => console.log('first')}
+            onClick={() => signIn()}
           />
         )}
       </div>

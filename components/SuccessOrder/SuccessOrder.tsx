@@ -1,4 +1,5 @@
 import { CheckIcon } from '@heroicons/react/outline';
+import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { randomNumber } from '../../utils/generateRandomNumber';
@@ -9,6 +10,8 @@ type SuccessOrderProps = {};
 
 const SuccessOrder: React.FC<SuccessOrderProps> = () => {
   const router = useRouter();
+  const { data: session } = useSession();
+
   const { session_id } = router.query;
 
   return (
@@ -19,7 +22,7 @@ const SuccessOrder: React.FC<SuccessOrderProps> = () => {
         </div>
         <div>
           <p className={styles.successOrderTitle}>Order #{session_id?.slice(-5)}</p>
-          <h4 className='text-lg'>Thank you</h4>
+          <h4 className='text-lg'>Thank you {session ? session.user?.name : 'Guest'}</h4>
         </div>
       </div>
       <div className={styles.successOrderConfirmationContainer}>
