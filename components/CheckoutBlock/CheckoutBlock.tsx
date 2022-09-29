@@ -8,12 +8,38 @@ import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
 import Currency from 'react-currency-formatter';
 import { ChevronDownIcon } from '@heroicons/react/outline';
 import styles from './checkoutblock.module.css';
+import { Stripe } from 'stripe';
+import { fetchPostJSON } from '../../utils/apiHelpers';
+import getStripe from '../../utils/getStripe';
 
 const CheckoutBlock: React.FC = () => {
   const router = useRouter();
   const itemsInCart = useSelector(cartItemsSelector);
   const totalPrice = useSelector(totalPriceSelector);
   const [groupedItems, setGroupedItems] = useState({} as { [key: string]: Product[] });
+  const [loading, setLoading] = useState(false);
+
+  const createCheckoutSession = async () => {
+    setLoading(true);
+
+    const checkoutSession: Stripe.Checkout.Session = await fetchPostJSON('/api/checkoutSessions', {
+      items: itemsInCart,
+    });
+
+    if ((checkoutSession as any).statusCode === 500) {
+      console.log((checkoutSession as any).message);
+      return;
+    }
+
+    //Redirect to stripe payment portal
+    const stripe = await getStripe();
+    const { error } = await stripe!.redirectToCheckout({
+      sessionId: checkoutSession.id,
+    });
+    console.log(error.message);
+
+    setLoading(false);
+  };
 
   useEffect(() => {
     const groupedItems = itemsInCart.reduce((acc, item) => {
@@ -116,6 +142,8 @@ const CheckoutBlock: React.FC = () => {
                   <Button
                     title='Check Out'
                     width='w-full'
+                    loading={loading}
+                    onClick={createCheckoutSession}
                   />
                 </div>
               </div>
