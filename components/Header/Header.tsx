@@ -28,7 +28,9 @@ const Header: React.FC = () => {
         </Link>
       </div>
       <div className={styles.headerLinks}>
-        <a className={styles.headerLink}>Product</a>
+        <div className={styles.headerLink}>
+          <Link href='/products'>Products</Link>
+        </div>
         <a className={styles.headerLink}>Explore</a>
         <a className={styles.headerLink}>Support</a>
         <a className={styles.headerLink}>Business</a>

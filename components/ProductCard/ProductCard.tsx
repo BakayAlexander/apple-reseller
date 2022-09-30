@@ -8,9 +8,9 @@ import { addToCart } from '../../redux/cartSlice';
 import { urlFor } from '../../sanity';
 import styles from './productcard.module.css';
 
-type ProductCardProps = { product: Product };
+type ProductCardProps = { product: Product; productsPage?: boolean };
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, productsPage }) => {
   const dispatch = useDispatch();
 
   const addItemToShoppingCart = () => {
@@ -20,7 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <div className={styles.product}>
+    <div className={productsPage ? styles.productModified : styles.product}>
       <div className={styles.productImage}>
         <Image
           src={urlFor(product.image[0]).url()}
@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         />
       </div>
       <div className={styles.productTextContainer}>
-        <div className={styles.productText}>
+        <div className={productsPage ? styles.productTextModified : styles.productText}>
           <p>{product.title}</p>
           <p>{product.price} $</p>
         </div>
