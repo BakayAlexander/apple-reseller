@@ -12,9 +12,9 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
-  session: {
-    strategy: 'jwt',
-  },
-  secret: process.env.NEXTAUTH_SECRET,
-  adapter: SanityAdapter(sanityClient),
+  // session: {
+  //   strategy: 'jwt',
+  // },
+  // secret: process.env.NEXTAUTH_SECRET,
+  // adapter: SanityAdapter(sanityClient),
 });
