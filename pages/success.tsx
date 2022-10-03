@@ -2,8 +2,8 @@ import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import Header from '../components/Header/Header';
-import SuccessItemsCart from '../components/SuccessItemsCart/SuccessItemsCart';
-import SuccessOrder from '../components/SuccessOrder/SuccessOrder';
+import SuccessItemsCart from '../components/Success/SuccessItemsCart/SuccessItemsCart';
+import SuccessOrder from '../components/Success/SuccessOrder/SuccessOrder';
 import { fetchLineItems, StripeProduct } from '../utils/fetchLineItems';
 
 type SuccessProps = {

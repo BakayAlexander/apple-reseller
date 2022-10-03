@@ -1,0 +1,47 @@
+.container {
+  @apply order-2 mx-auto max-w-xl pb-12 lg:col-span-5 lg:mx-0 lg:max-w-none lg:pr-16 lg:pt-16 xl:pl-16 2xl:pl-44;
+}
+
+.numberContainer {
+  @apply ml-4 flex space-x-4 py-8 lg:ml-14 xl:ml-0;
+}
+
+.checkIcon {
+  @apply flex h-11 w-11 items-center justify-center rounded-full border-2 border-black;
+}
+
+.title {
+  @apply text-sm text-gray-600;
+}
+
+.confirmationContainer {
+  @apply space-y-2 pb-3;
+}
+
+.confirmationText {
+  @apply text-sm text-gray-600;
+}
+
+.dileveryNumber {
+  @apply pt-3 text-sm;
+}
+
+.dileveryNumberText {
+  @apply font-medium text-gray-600;
+}
+
+.orderUpdates {
+  @apply my-4 mt-12 space-y-2 rounded-md border border-gray-300 py-4 pr-4 pl-1;
+}
+
+.orderUpdatesText {
+  @apply text-sm text-gray-600;
+}
+
+.buttonsContainer {
+  @apply flex flex-col items-center justify-between text-sm lg:flex-row;
+}
+
+.supporButton {
+  @apply hidden cursor-pointer hover:underline lg:inline;
+}

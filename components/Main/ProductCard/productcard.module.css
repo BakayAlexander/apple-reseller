@@ -1,0 +1,31 @@
+.container {
+  @apply flex h-fit w-[320px] select-none flex-col space-y-3 rounded-xl bg-[#35383C] p-8 md:h-[500px] md:w-[400px] md:p-10;
+}
+
+.containerForProductsPage {
+  @apply flex h-fit w-[320px] select-none flex-col space-y-3 rounded-xl bg-[#ffffff] p-8 md:h-[400px] md:w-[320px] md:p-10;
+}
+
+.image {
+  @apply relative h-64 w-full md:h-72;
+}
+
+.textContainer {
+  @apply flex flex-1 items-center justify-between space-x-3;
+}
+
+.text {
+  @apply space-y-2 text-xl text-white md:text-2xl;
+}
+
+.textForProductsPage {
+  @apply space-y-2 text-xl text-gray-500;
+}
+
+.shoppingCart {
+  @apply flex h-16 w-16 flex-shrink-0 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-violet-500 md:h-[60px] md:w-[60px];
+}
+
+.shoppingCartIcon {
+  @apply h-8 w-8 text-white;
+}

@@ -1,11 +1,9 @@
 import Head from 'next/head';
 import React from 'react';
-import ExploreContent from '../components/ExploreContent/ExploreContent';
+import ExplorePromo from '../components/Explore/ExplorePromo/ExplorePromo';
 import Header from '../components/Header/Header';
 
-type ExploreProps = {};
-
-const Explore: React.FC<ExploreProps> = () => {
+const Explore: React.FC = () => {
   return (
     <>
       <Head>
@@ -16,9 +14,7 @@ const Explore: React.FC<ExploreProps> = () => {
         />
       </Head>
       <Header />
-      <main>
-        <ExploreContent />
-      </main>
+      <ExplorePromo />
     </>
   );
 };

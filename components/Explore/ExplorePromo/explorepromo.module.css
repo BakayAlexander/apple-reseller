@@ -1,0 +1,11 @@
+.container {
+  @apply mx-auto border-t border-gray-500 md:w-5/6;
+}
+
+.title {
+  @apply my-4 text-4xl text-gray-500;
+}
+
+.cardsBlock {
+  @apply mt-12 grid grid-cols-2 gap-10 pb-24;
+}

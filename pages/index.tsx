@@ -3,9 +3,9 @@ import { Session } from 'next-auth';
 import { getSession } from 'next-auth/react';
 import Head from 'next/head';
 import Header from '../components/Header/Header';
-import Promo from '../components/Landing/Promo';
-import Products from '../components/Products/Products';
-import ShoppingCart from '../components/ShoppingCart/ShoppingCart';
+import Promo from '../components/Main/Promo/Promo';
+import Products from '../components/Main/Products/Products';
+import ShoppingCart from '../components/Buttons/ShoppingCart/ShoppingCart';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
 import { Category } from './api/getCategories';
@@ -17,9 +17,9 @@ type HomeProps = {
   session: Session | null;
 };
 
-const Home: React.FC<HomeProps> = ({ categories, products, session }) => {
+const Home: React.FC<HomeProps> = ({ categories, products }) => {
   return (
-    <div>
+    <>
       <Head>
         <title>Apple Reseller</title>
         <link
@@ -34,7 +34,7 @@ const Home: React.FC<HomeProps> = ({ categories, products, session }) => {
         products={products}
       />
       <ShoppingCart />
-    </div>
+    </>
   );
 };
 

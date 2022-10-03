@@ -1,0 +1,35 @@
+.container {
+  @apply mt-12 flex items-center justify-center;
+}
+
+.textContainer {
+  @apply flex w-4/6 flex-col;
+}
+
+.titleContainer {
+  @apply space-y-3 pt-6 text-5xl font-semibold tracking-wide text-gray-700 lg:text-6xl xl:text-7xl;
+}
+
+.title {
+  @apply block;
+}
+
+.buttonContainer {
+  @apply grid grid-cols-2 py-12;
+}
+
+.button {
+  @apply flex space-x-4;
+}
+
+.buttonText {
+  @apply text-xl;
+}
+
+.textContent {
+  @apply flex flex-col justify-end pr-8 pt-8 text-gray-500;
+}
+
+.image {
+  @apply relative h-[500px] w-2/6 mix-blend-darken;
+}
