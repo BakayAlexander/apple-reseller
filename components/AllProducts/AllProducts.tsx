@@ -34,7 +34,7 @@ const AllProducts: React.FC<AllProductsProps> = ({ categories, products }) => {
 
   return (
     <section className={styles.allProducts}>
-      <h2 className={styles.allProductsTitle}>Products</h2>
+      <h1 className={styles.allProductsTitle}>Products</h1>
       <div className={styles.allProductsInputContainer}>
         <input
           type='text'

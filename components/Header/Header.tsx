@@ -31,7 +31,9 @@ const Header: React.FC = () => {
         <div className={styles.headerLink}>
           <Link href='/products'>Products</Link>
         </div>
-        <a className={styles.headerLink}>Explore</a>
+        <div className={styles.headerLink}>
+          <Link href='/explore'> Explore</Link>
+        </div>
         <a className={styles.headerLink}>Support</a>
         <a className={styles.headerLink}>Business</a>
       </div>
