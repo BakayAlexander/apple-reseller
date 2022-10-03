@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Category } from '../../pages/api/getCategories';
 import { Product } from '../../pages/api/getProducts';
-import Button from '../Button/Button';
-import ProductCard from '../ProductCard/ProductCard';
-import ShoppingCart from '../ShoppingCart/ShoppingCart';
+import Button from '../Buttons/Button/Button';
+import ShoppingCart from '../Buttons/ShoppingCart/ShoppingCart';
+import ProductCard from '../Main/ProductCard/ProductCard';
 import styles from './allproducts.module.css';
 
 type AllProductsProps = {
@@ -33,39 +33,41 @@ const AllProducts: React.FC<AllProductsProps> = ({ categories, products }) => {
   };
 
   return (
-    <section className={styles.allProducts}>
-      <h1 className={styles.allProductsTitle}>Products</h1>
-      <div className={styles.allProductsInputContainer}>
-        <input
-          type='text'
-          value={inputFilter}
-          placeholder='Type to search'
-          onChange={handleInputChange}
-          className={styles.allProductsInput}
-        />
-      </div>
-      {filtredProducts.length > 0 ? (
-        <div className={styles.allProductsItemsContainer}>
-          {filtredProducts.map(product => (
-            <ProductCard
-              product={product}
-              key={product._id}
-              productsPage
-            />
-          ))}
-        </div>
-      ) : (
-        <div className={styles.allProductsNotFoundContainer}>
-          <h3 className={styles.allProductsNotFoundTitle}>No products found</h3>
-          <Button
-            title='Reset Search'
-            onClick={resetSearch}
+    <main>
+      <section className={styles.container}>
+        <h1 className={styles.title}>Products</h1>
+        <div className={styles.inputContainer}>
+          <input
+            type='text'
+            value={inputFilter}
+            placeholder='Type to search'
+            onChange={handleInputChange}
+            className={styles.input}
           />
         </div>
-      )}
+        {filtredProducts.length > 0 ? (
+          <div className={styles.productsContainer}>
+            {filtredProducts.map(product => (
+              <ProductCard
+                product={product}
+                key={product._id}
+                productsPage
+              />
+            ))}
+          </div>
+        ) : (
+          <div className={styles.notFound}>
+            <h3 className={styles.notFoundTitle}>No products found</h3>
+            <Button
+              title='Reset Search'
+              onClick={resetSearch}
+            />
+          </div>
+        )}
 
-      <ShoppingCart />
-    </section>
+        <ShoppingCart />
+      </section>
+    </main>
   );
 };
 export default AllProducts;

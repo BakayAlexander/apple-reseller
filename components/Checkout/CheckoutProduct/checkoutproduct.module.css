@@ -1,0 +1,43 @@
+.container {
+  @apply flex flex-col gap-x-4 border-b border-gray-300 pb-5 lg:flex-row lg:items-center;
+}
+
+.image {
+  @apply relative h-44 w-44;
+}
+
+.info {
+  @apply flex flex-1 items-end lg:items-center;
+}
+
+.titleContainer {
+  @apply flex-1 space-y-4;
+}
+
+.title {
+  @apply flex flex-col gap-x-8 text-xl lg:flex-row lg:text-2xl;
+}
+
+.amount {
+  @apply flex items-end gap-x-1 font-semibold;
+}
+
+.productDetails {
+  @apply flex cursor-pointer items-end text-blue-500 hover:underline;
+}
+
+.productDetailsIcon {
+  @apply h-6 w-6 text-blue-500;
+}
+
+.currencyContainer {
+  @apply flex flex-col items-end space-y-4;
+}
+
+.currency {
+  @apply text-xl font-semibold lg:text-2xl;
+}
+
+.removeButton {
+  @apply text-blue-500 hover:underline;
+}

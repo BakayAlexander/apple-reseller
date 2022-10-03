@@ -1,5 +1,4 @@
 import { SearchIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react/outline';
-import { Session } from 'next-auth';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,10 +13,10 @@ const Header: React.FC = () => {
   const itemsInCart = useSelector(cartItemsSelector);
 
   return (
-    <header className={styles.header}>
-      <div className={styles.headerLogoContainer}>
+    <header className={styles.container}>
+      <div className={styles.logoContainer}>
         <Link href='/'>
-          <div className={styles.headerLogo}>
+          <div className={styles.logo}>
             <Image
               src='https://rb.gy/vsvv2o'
               alt='Header apple logo'
@@ -27,36 +26,36 @@ const Header: React.FC = () => {
           </div>
         </Link>
       </div>
-      <div className={styles.headerLinks}>
-        <div className={styles.headerLink}>
+      <div className={styles.linksContainer}>
+        <div className={styles.link}>
           <Link href='/products'>Products</Link>
         </div>
-        <div className={styles.headerLink}>
+        <div className={styles.link}>
           <Link href='/explore'> Explore</Link>
         </div>
-        <a className={styles.headerLink}>Support</a>
-        <a className={styles.headerLink}>Business</a>
+        <a className={styles.link}>Support</a>
+        <a className={styles.link}>Business</a>
       </div>
-      <div className={styles.headerSearchCartContainer}>
-        <SearchIcon className={styles.headerIcon} />
+      <div className={styles.iconsContainer}>
+        <SearchIcon className={styles.icon} />
         <Link href='/checkout'>
-          <div className={styles.headerCartContainer}>
-            {!!itemsInCart.length && <span className={styles.headerCartNumber}>{itemsInCart.length}</span>}
-            <ShoppingBagIcon className={styles.headerIcon} />
+          <div className={styles.cartContainer}>
+            {!!itemsInCart.length && <span className={styles.cartNumber}>{itemsInCart.length}</span>}
+            <ShoppingBagIcon className={styles.icon} />
           </div>
         </Link>
         {session ? (
           <Image
             src={session.user?.image || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'}
             alt='User avatar'
-            className={styles.headerUserAvatar}
+            className={styles.userAvatar}
             width={34}
             height={34}
             onClick={() => signOut()}
           />
         ) : (
           <UserIcon
-            className={styles.headerIcon}
+            className={styles.icon}
             onClick={() => signIn()}
           />
         )}

@@ -26,12 +26,10 @@ const Products: React.FC<ProductsProps> = ({ categories, products }) => {
         />
       </Head>
       <Header />
-      <main>
-        <AllProducts
-          categories={categories}
-          products={products}
-        />
-      </main>
+      <AllProducts
+        categories={categories}
+        products={products}
+      />
     </>
   );
 };
