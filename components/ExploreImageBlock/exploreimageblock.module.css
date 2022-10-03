@@ -1,0 +1,11 @@
+.container {
+  @apply relative h-[100vh] w-full mix-blend-darken;
+}
+
+.titleLeft {
+  @apply absolute top-1/2 text-2xl text-gray-700;
+}
+
+.titleRight {
+  @apply absolute top-1/2 right-0 text-2xl text-gray-700;
+}

@@ -1,0 +1,19 @@
+.container {
+  @apply flex flex-col items-center justify-center rounded-lg bg-gray-200 p-12 text-center text-gray-700;
+}
+
+.title {
+  @apply text-xl font-semibold;
+}
+
+.subtitlesContainer {
+  @apply mt-6;
+}
+
+.subtitle {
+  @apply text-2xl font-semibold;
+}
+
+.image {
+  @apply relative mt-10 h-[300px] w-full mix-blend-darken;
+}

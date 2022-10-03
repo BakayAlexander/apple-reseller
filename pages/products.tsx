@@ -1,46 +1,44 @@
-import type { GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { Session } from 'next-auth';
 import { getSession } from 'next-auth/react';
 import Head from 'next/head';
+import AllProducts from '../components/AllProducts/AllProducts';
 import Header from '../components/Header/Header';
-import Promo from '../components/Landing/Promo';
-import Products from '../components/Products/Products';
-import ShoppingCart from '../components/ShoppingCart/ShoppingCart';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
 import { Category } from './api/getCategories';
 import { Product } from './api/getProducts';
 
-type HomeProps = {
+type ProductsProps = {
   categories: Category[];
   products: Product[];
   session: Session | null;
 };
 
-const Home: React.FC<HomeProps> = ({ categories, products, session }) => {
+const Products: React.FC<ProductsProps> = ({ categories, products }) => {
   return (
-    <div>
+    <>
       <Head>
-        <title>Apple Reseller</title>
+        <title>Products</title>
         <link
           rel='icon'
           href='/favicon.ico'
         />
       </Head>
       <Header />
-      <Promo />
-      <Products
-        categories={categories}
-        products={products}
-      />
-      <ShoppingCart />
-    </div>
+      <main>
+        <AllProducts
+          categories={categories}
+          products={products}
+        />
+      </main>
+    </>
   );
 };
 
-export default Home;
+export default Products;
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async context => {
+export const getServerSideProps: GetServerSideProps<ProductsProps> = async context => {
   const categories = await fetchCategories();
   const products = await fetchProducts();
   const session = await getSession(context);

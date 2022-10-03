@@ -10,6 +10,6 @@
   }
 
   main {
-    @apply relative h-[200vh] bg-[#E7ECEE];
+    @apply relative min-h-[200vh] bg-[#E7ECEE];
   }
 }

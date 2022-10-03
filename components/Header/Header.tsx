@@ -28,8 +28,12 @@ const Header: React.FC = () => {
         </Link>
       </div>
       <div className={styles.headerLinks}>
-        <a className={styles.headerLink}>Product</a>
-        <a className={styles.headerLink}>Explore</a>
+        <div className={styles.headerLink}>
+          <Link href='/products'>Products</Link>
+        </div>
+        <div className={styles.headerLink}>
+          <Link href='/explore'> Explore</Link>
+        </div>
         <a className={styles.headerLink}>Support</a>
         <a className={styles.headerLink}>Business</a>
       </div>
