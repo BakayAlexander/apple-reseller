@@ -8,13 +8,15 @@ type ButtonProps = {
   padding?: string;
   noIcon?: boolean;
   onClick?: () => void;
+  type?: 'submit' | undefined;
 };
 
-const Button: React.FC<ButtonProps> = ({ title, width, loading, padding, noIcon, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ title, width, loading, padding, noIcon, onClick, type }) => {
   return (
     <button
       className={`${styles.button} ease group ${width ? width : 'w-auto'} ${padding}`}
       onClick={onClick}
+      type={type}
     >
       <span className={`${styles.buttonBottomShadow} ease-out group-hover:translate-x-0`}></span>
       <span className={`${styles.buttonTopShadow} ease-out group-hover:translate-x-0`}></span>

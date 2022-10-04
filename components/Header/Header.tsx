@@ -33,7 +33,9 @@ const Header: React.FC = () => {
         <div className={styles.link}>
           <Link href='/explore'> Explore</Link>
         </div>
-        <a className={styles.link}>Support</a>
+        <div className={styles.link}>
+          <Link href='/contact'> Contact</Link>
+        </div>
         <a className={styles.link}>Business</a>
       </div>
       <div className={styles.iconsContainer}>

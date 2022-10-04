@@ -1,0 +1,19 @@
+.form {
+  @apply flex flex-col items-end;
+}
+
+.label {
+  @apply mt-4 text-gray-700;
+}
+
+.input {
+  @apply w-4/6 rounded-md bg-[#f2f8f9] p-3 focus:outline-lime-100;
+}
+
+.textarea {
+  @apply mb-4 h-20 w-4/6 rounded-md bg-[#f2f8f9] p-3 focus:outline-lime-100;
+}
+
+.error {
+  @apply text-red-500;
+}
