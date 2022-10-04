@@ -33,8 +33,12 @@ const Header: React.FC = () => {
         <div className={styles.link}>
           <Link href='/explore'> Explore</Link>
         </div>
-        <a className={styles.link}>Support</a>
-        <a className={styles.link}>Business</a>
+        <div className={styles.link}>
+          <Link href='/contact'> Contact</Link>
+        </div>
+        <div className={styles.link}>
+          <Link href='/business'> Business</Link>
+        </div>
       </div>
       <div className={styles.iconsContainer}>
         <SearchIcon className={styles.icon} />
