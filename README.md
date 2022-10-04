@@ -1,27 +1,58 @@
-# Next.js + Tailwind CSS Example
+# :apple: Apple Reseller
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This project was building with
+[Create Next App](https://nextjs.org/docs/api-reference/create-next-app).
 
-## Deploy your own
+### :gear: `Technical stack`:
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- :hammer_and_pick:	 Next.js
+- :magnet: Tailwind
+- :package: Redux
+- :balance_scale: TypeScript
+- :jigsaw: Firebase
+- :euro: Stripe
+- :martial_arts_uniform: Formik
+- :reminder_ribbon: Sanity
+- :movie_camera: Headless CSS
+- :sandwich: React Hot Toast
+- :fireworks: CodeStyle - Prettier
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+### :scroll: Description:
 
-## How to use
+Apple Reseller App with Sanity admin panel. As a user you can log in using your Google account, choose products and pay for them using Stripe portal. As admin, you can add new products and categories.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+### :astronaut: User guide:
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+1. Log in with a Google account or stay logged out.
+2. Choose products and add them to your shopping cart.
+3. To pay for your subscription please use a test credit card:
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- Visa
+- 4242 4242 4242 4242
+- CVC: any 3 digits
+- Date: any future date
+- Name and surname: any
+- Address: any
+- you can also use another test card from [Stripe docs](https://stripe.com/docs/testing).
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### :shinto_shrine: `yarn dev`
+
+- Download this project or `git clone`
+- Run command `yarn install`
+- Run `yarn dev`
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.
+
+# :desktop_computer: Public domain
+
+#### :exclamation: If you are using Google Chrome you may have «Your connection is not private» error. You can skip this by clicking "Advanced" -> "Visit this website". That’s all because I’m using a free Netlify domain to deploy my app, sorry for that :crying_cat_face:
+
+
+## [Apple Reseller](https://apple-reseller.vercel.app/)
+
+
+
+
+
