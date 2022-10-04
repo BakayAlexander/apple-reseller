@@ -9,7 +9,7 @@ This project was building with
 - :magnet: Tailwind
 - :package: Redux
 - :balance_scale: TypeScript
-- :jigsaw: Firebase
+- :jigsaw: Next Auth
 - :euro: Stripe
 - :martial_arts_uniform: Formik
 - :reminder_ribbon: Sanity
